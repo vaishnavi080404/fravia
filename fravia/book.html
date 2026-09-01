@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book a Session — Fravia Studios</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Archivo:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="brand-intro" id="brandIntro" aria-hidden="true">
+      <span class="brand-intro-text" id="brandIntroText">FRAVIA</span>
+    </div>
+
+    <nav class="site-nav solid">
+      <div class="wrap nav-row">
+        <a href="index.html" class="nav-mark">FRAVIA</a>
+        <div class="nav-links">
+          <a href="work.html">Work</a>
+          <a href="services.html">Services</a>
+          <a href="about.html">About</a>
+          <a href="archive.html">Archive</a>
+        </div>
+        <a href="book.html" class="nav-cta current">Book a session</a>
+        <button class="nav-burger" aria-label="Open menu">☰</button>
+      </div>
+    </nav>
+
+    <div class="nav-drawer">
+      <button class="nav-drawer-close" aria-label="Close menu">✕</button>
+      <a href="work.html">Work</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="archive.html">Archive</a>
+      <a href="book.html">Book a session</a>
+    </div>
+
+    <section class="page-hero" style="padding-bottom: 0">
+      <div class="wrap">
+        <span class="eyebrow">IS YOUR DATE AVAILABLE?</span>
+        <h1>Let's plan your shoot.</h1>
+        <p class="lead">
+          Five quick steps — tell us what you need and we'll take it from there.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap book-panel">
+        <div class="step-track">
+          <span data-step="1"></span><span data-step="2"></span
+          ><span data-step="3"></span><span data-step="4"></span
+          ><span data-step="5"></span>
+        </div>
+
+        <!-- step 1 -->
+        <div class="step active" data-step="1">
+          <p class="step-label">STEP 1 OF 5</p>
+          <h2>What are you looking for?</h2>
+          <div class="opt-grid">
+            <div class="opt-card" data-field="type" data-value="Wedding">
+              <b>Wedding</b><span>Full or half day</span>
+            </div>
+            <div class="opt-card" data-field="type" data-value="Portrait">
+              <b>Portrait</b><span>Solo or family</span>
+            </div>
+            <div class="opt-card" data-field="type" data-value="Couple">
+              <b>Couple</b><span>Engagement / pre-wedding</span>
+            </div>
+            <div class="opt-card" data-field="type" data-value="Event">
+              <b>Event</b><span>Corporate or private</span>
+            </div>
+          </div>
+          <div class="step-actions">
+            <span></span
+            ><button class="btn btn-primary" onclick="goStep(2)">
+              Continue
+            </button>
+          </div>
+        </div>
+
+        <!-- step 2 -->
+        <div class="step" data-step="2">
+          <p class="step-label">STEP 2 OF 5</p>
+          <h2>When?</h2>
+          <div class="field">
+            <label for="dateInput">Preferred date</label>
+            <input type="date" id="dateInput" />
+          </div>
+          <div class="step-actions">
+            <button class="link-btn" onclick="goStep(1)">← Back</button>
+            <button class="btn btn-primary" onclick="goStep(3)">
+              Continue
+            </button>
+          </div>
+        </div>
+
+        <!-- step 3 -->
+        <div class="step" data-step="3">
+          <p class="step-label">STEP 3 OF 5</p>
+          <h2>Where?</h2>
+          <div class="opt-grid">
+            <div class="opt-card" data-field="loc" data-value="Bangalore">
+              <b>Bangalore</b><span>Home base</span>
+            </div>
+            <div class="opt-card" data-field="loc" data-value="Other city">
+              <b>Other city</b><span>Within India</span>
+            </div>
+            <div class="opt-card" data-field="loc" data-value="Destination">
+              <b>Destination</b><span>Outside India</span>
+            </div>
+          </div>
+          <div class="step-actions">
+            <button class="link-btn" onclick="goStep(2)">← Back</button>
+            <button class="btn btn-primary" onclick="goStep(4)">
+              Continue
+            </button>
+          </div>
+        </div>
+
+        <!-- step 4 -->
+        <div class="step" data-step="4">
+          <p class="step-label">STEP 4 OF 5</p>
+          <h2>Tell us a little about it</h2>
+          <div class="field">
+            <label for="nameInput">Your name</label>
+            <input type="text" id="nameInput" placeholder="Full name" />
+          </div>
+          <div class="field">
+            <label for="msgInput">A short message (optional)</label>
+            <textarea
+              id="msgInput"
+              placeholder="Guest count, venue, anything else we should know"
+            ></textarea>
+          </div>
+          <div class="step-actions">
+            <button class="link-btn" onclick="goStep(3)">← Back</button>
+            <button class="btn btn-primary" onclick="goStep(5)">
+              Continue
+            </button>
+          </div>
+        </div>
+
+        <!-- step 5 -->
+        <div class="step" data-step="5">
+          <p class="step-label">STEP 5 OF 5</p>
+          <h2>How would you like to continue?</h2>
+          <div class="summary-card">
+            <p class="step-label" style="margin-bottom: 14px">
+              YOUR ENQUIRY IS READY
+            </p>
+            <dl>
+              <dt>Type</dt>
+              <dd id="sumType">—</dd>
+              <dt>Date</dt>
+              <dd id="sumDate">—</dd>
+              <dt>Location</dt>
+              <dd id="sumLoc">—</dd>
+              <dt>Name</dt>
+              <dd id="sumName">—</dd>
+            </dl>
+          </div>
+          <div
+            class="opt-grid"
+            style="grid-template-columns: 1fr 1fr 1fr; gap: 10px"
+          >
+            <a
+              class="btn btn-primary"
+              id="sendWhatsapp"
+              href="#"
+              target="_blank"
+              rel="noopener"
+              style="justify-content: center"
+              >WhatsApp</a
+            >
+            <a
+              class="btn btn-ghost-dark"
+              href="tel:+919187556950"
+              style="justify-content: center"
+              >Call</a
+            >
+            <a
+              class="btn btn-ghost-dark"
+              id="sendEmail"
+              href="mailto:hello@fraviastudios.com"
+              style="justify-content: center"
+              >Email</a
+            >
+          </div>
+          <div class="step-actions">
+            <button class="link-btn" onclick="goStep(4)">← Back</button>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <div class="footer-grid">
+          <div>
+            <div class="footer-mark">FRAVIA</div>
+            <p class="footer-tag">
+              Photography that feels like a memory. Weddings, portraits, events
+              and travel — based in Bangalore, available worldwide.
+            </p>
+          </div>
+          <div class="footer-col">
+            <h4>STUDIO</h4>
+            <a href="work.html">Work</a>
+            <a href="services.html">Services</a>
+            <a href="about.html">About</a>
+            <a href="archive.html">Stories</a>
+          </div>
+          <div class="footer-col">
+            <h4>CONNECT</h4>
+            <a
+              href="https://www.instagram.com/fravia.studios/"
+              target="_blank"
+              rel="noopener"
+              >Instagram</a
+            >
+            <a href="https://wa.me/9187556950" target="_blank" rel="noopener"
+              >WhatsApp</a
+            >
+            <a href="mailto:hello@fraviastudios.com">Email</a>
+            <a href="book.html">Book a session</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2026 Fravia Studios</span>
+          <span>Bangalore · India · Worldwide</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+      // keeping form state in one plain object - no need for anything heavier than this
+      const form = { type: "", date: "", loc: "", name: "", msg: "" };
+
+      // preselect package/type if user arrived from a pricing card link (?package=wedding)
+      const pkgParam = new URLSearchParams(location.search).get("package");
+      const pkgMap = {
+        portrait: "Portrait",
+        couples: "Couple",
+        wedding: "Wedding",
+      };
+      if (pkgParam && pkgMap[pkgParam]) {
+        form.type = pkgMap[pkgParam];
+      }
+
+      document.querySelectorAll(".opt-card").forEach((card) => {
+        card.addEventListener("click", () => {
+          const field = card.dataset.field;
+          document
+            .querySelectorAll(`.opt-card[data-field="${field}"]`)
+            .forEach((c) => c.classList.remove("selected"));
+          card.classList.add("selected");
+          form[field] = card.dataset.value;
+        });
+        if (
+          form.type &&
+          card.dataset.field === "type" &&
+          card.dataset.value === form.type
+        ) {
+          card.classList.add("selected");
+        }
+      });
+
+      function goStep(n) {
+        document
+          .querySelectorAll(".step")
+          .forEach((s) =>
+            s.classList.toggle("active", Number(s.dataset.step) === n),
+          );
+        document
+          .querySelectorAll(".step-track span")
+          .forEach((s) =>
+            s.classList.toggle("done", Number(s.dataset.step) < n),
+          );
+        if (n === 5) buildSummary();
+        window.scrollTo({
+          top: document.querySelector(".book-panel").offsetTop - 120,
+          behavior: "smooth",
+        });
+      }
+
+      function buildSummary() {
+        form.date = document.getElementById("dateInput").value;
+        form.name = document.getElementById("nameInput").value;
+        form.msg = document.getElementById("msgInput").value;
+
+        document.getElementById("sumType").textContent = form.type || "—";
+        document.getElementById("sumDate").textContent = form.date || "—";
+        document.getElementById("sumLoc").textContent = form.loc || "—";
+        document.getElementById("sumName").textContent = form.name || "—";
+
+        const lines = [
+          `Hi Fravia! I'd like to enquire about a ${form.type || "session"}.`,
+          form.date ? `Date: ${form.date}` : "",
+          form.loc ? `Location: ${form.loc}` : "",
+          form.name ? `Name: ${form.name}` : "",
+          form.msg ? `Note: ${form.msg}` : "",
+        ]
+          .filter(Boolean)
+          .join("\n");
+
+        document.getElementById("sendWhatsapp").href =
+          `https://wa.me/9187556950?text=${encodeURIComponent(lines)}`;
+        document.getElementById("sendEmail").href =
+          `mailto:hello@fraviastudios.com?subject=${encodeURIComponent("Session enquiry - " + (form.type || "General"))}&body=${encodeURIComponent(lines)}`;
+      }
+    </script>
+  </body>
+</html>

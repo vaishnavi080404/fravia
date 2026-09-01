@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Archive — Fravia Studios</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Archivo:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="brand-intro" id="brandIntro" aria-hidden="true">
+      <span class="brand-intro-text" id="brandIntroText">FRAVIA</span>
+    </div>
+
+    <nav class="site-nav solid">
+      <div class="wrap nav-row">
+        <a href="index.html" class="nav-mark">FRAVIA</a>
+        <div class="nav-links">
+          <a href="work.html">Work</a>
+          <a href="services.html">Services</a>
+          <a href="about.html">About</a>
+          <a href="archive.html" class="current">Archive</a>
+        </div>
+        <a href="book.html" class="nav-cta">Book a session</a>
+        <button class="nav-burger" aria-label="Open menu">☰</button>
+      </div>
+    </nav>
+
+    <div class="nav-drawer">
+      <button class="nav-drawer-close" aria-label="Close menu">✕</button>
+      <a href="work.html">Work</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="archive.html">Archive</a>
+      <a href="book.html">Book a session</a>
+    </div>
+
+    <section class="page-hero">
+      <div class="wrap">
+        <span class="eyebrow">THE ARCHIVE</span>
+        <h1>The full body of work, in one place.</h1>
+        <p class="lead">
+          Every frame worth keeping, sorted the way you want to browse it.
+        </p>
+      </div>
+    </section>
+
+    <section style="padding-top: 0">
+      <div class="wrap">
+        <div class="archive-filters" id="archFilters">
+          <button class="filter-btn active" data-cat="all">All</button>
+          <button class="filter-btn" data-cat="weddings">Weddings</button>
+          <button class="filter-btn" data-cat="portraits">Portraits</button>
+          <button class="filter-btn" data-cat="events">Events</button>
+          <button class="filter-btn" data-cat="travel">Travel</button>
+        </div>
+        <div class="masonry" id="masonryGrid"></div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <div class="footer-grid">
+          <div>
+            <div class="footer-mark">FRAVIA</div>
+            <p class="footer-tag">
+              Photography that feels like a memory. Weddings, portraits, events
+              and travel — based in Bangalore, available worldwide.
+            </p>
+          </div>
+          <div class="footer-col">
+            <h4>STUDIO</h4>
+            <a href="work.html">Work</a>
+            <a href="services.html">Services</a>
+            <a href="about.html">About</a>
+            <a href="archive.html">Stories</a>
+          </div>
+          <div class="footer-col">
+            <h4>CONNECT</h4>
+            <a
+              href="https://www.instagram.com/fravia.studios/"
+              target="_blank"
+              rel="noopener"
+              >Instagram</a
+            >
+            <a href="https://wa.me/9187556950" target="_blank" rel="noopener"
+              >WhatsApp</a
+            >
+            <a href="mailto:hello@fraviastudios.com">Email</a>
+            <a href="book.html">Book a session</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2026 Fravia Studios</span>
+          <span>Bangalore · India · Worldwide</span>
+        </div>
+      </div>
+    </footer>
+
+    <div class="lightbox" id="lightbox">
+      <button class="lightbox-close" aria-label="Close">✕</button>
+      <button class="lightbox-nav prev" aria-label="Previous photo">‹</button>
+      <img id="lbImg" src="" alt="" />
+      <div class="lightbox-meta">
+        <p class="count" id="lbCount"></p>
+        <h3 id="lbTitle"></h3>
+      </div>
+      <button class="lightbox-nav next" aria-label="Next photo">›</button>
+    </div>
+
+    <div class="float-bar">
+      <div class="wrap">
+        <span class="float-bar-mark">FRAVIA STUDIOS</span>
+        <div class="float-bar-links">
+          <a href="work.html?type=weddings">Weddings</a>
+          <a href="work.html?type=portraits">Portraits</a>
+          <a href="work.html?type=events">Events</a>
+          <a href="work.html?type=travel">Travel</a>
+        </div>
+        <div class="float-bar-cta">
+          <a
+            class="pill outline"
+            href="https://wa.me/9187556950"
+            target="_blank"
+            rel="noopener"
+            >WhatsApp</a
+          >
+          <a class="pill brass" href="book.html">Book a session →</a>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script>
+      // Curated archive dataset with real Indian weddings, rituals, portraits, events, and travel photos from Unsplash
+      const photos = [
+        // Weddings (North & South Indian, Haldi, Mehendi, Rituals)
+        {
+          id: 1,
+          cat: "weddings",
+          url: "https://fravia.odoo.com/web/image/3043-1dbbdef9/GKV_2416.webp",
+          title: "WEDDING · North Indian Bride Portrait",
+        },
+        {
+          id: 2,
+          cat: "weddings",
+          url: "https://fravia.odoo.com/web/image/3027-0081c042/GKV_2466.webp",
+          title: "WEDDING · Haldi Ceremony Ritual",
+        },
+        {
+          id: 3,
+          cat: "weddings",
+          url: "https://fravia.odoo.com/web/image/3040-3c1dd5cf/GKV_7561-Edit.webp",
+          title: "WEDDING · Reception Evening",
+        },
+        {
+          id: 4,
+          cat: "weddings",
+          url: "https://fravia.odoo.com/web/image/3615-17b8b006/GKV_3959.webp",
+          title: "WEDDING · South Indian Silk Saree Detail",
+        },
+        {
+          id: 5,
+          cat: "weddings",
+          url: "https://fravia.odoo.com/web/image/3685-f79e89b8/GKV_3249.webp",
+          title: "WEDDING · Mehendi Intricate Hands",
+        },
+        {
+          id: 6,
+          cat: "weddings",
+          url: "https://fravia.odoo.com/web/image/3459-4b005469/GKV02913.webp",
+          title: "WEDDING · Mandap & Pheras Ritual",
+        },
+
+        // Portraits
+        {
+          id: 7,
+          cat: "portraits",
+          url: "https://fravia.odoo.com/web/image/4628-b86c3d15/0E4A8285.webp",
+          title: "PORTRAIT · Studio Editorial",
+        },
+        {
+          id: 8,
+          cat: "portraits",
+          url: "https://fravia.odoo.com/web/image/4657-812083ef/GKV_9227.webp",
+          title: "PORTRAIT · Candid Golden Hour",
+        },
+        {
+          id: 9,
+          cat: "portraits",
+          url: "https://fravia.odoo.com/web/image/4656-db8fe613/GKV_8877.webp",
+          title: "PORTRAIT · Traditional Attire",
+        },
+        {
+          id: 10,
+          cat: "portraits",
+          url: "https://fravia.odoo.com/web/image/938-52b483bf/_MG_6319.webp",
+          title: "PORTRAIT · Natural Light Close-up",
+        },
+        {
+          id: 11,
+          cat: "portraits",
+          url: "https://fravia.odoo.com/web/image/939-8f73f3af/PSFix_20240612_183755.webp",
+          title: "PORTRAIT · Monochrome Mood",
+        },
+        {
+          id: 12,
+          cat: "portraits",
+          url: "https://fravia.odoo.com/web/image/999-8e412792/IMG20211024142214%20%281%29.webp",
+          title: "PORTRAIT · Urban Street Style",
+        },
+
+        // Events (Birthdays, Home celebrations, Gatherings)
+        {
+          id: 13,
+          cat: "events",
+          url: "https://fravia.odoo.com/web/image/5511-b6a7ed4a/GKV_9397.webp",
+          title: "EVENT · Birthday Celebration",
+        },
+        {
+          id: 14,
+          cat: "events",
+          url: "https://fravia.odoo.com/web/image/5412-0b2ff750/GKVK0109.webp",
+          title: "EVENT · Home Gathering & Dinner",
+        },
+        {
+          id: 15,
+          cat: "events",
+          url: "https://fravia.odoo.com/web/image/5512-4d77b0f0/IMG_0007.webp",
+          title: "EVENT · Stage & Lighting",
+        },
+        {
+          id: 16,
+          cat: "events",
+          url: "https://fravia.odoo.com/web/image/5041-91da24f9/24330200.webp",
+          title: "EVENT · Anniversary Night",
+        },
+        {
+          id: 17,
+          cat: "events",
+          url: "https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&w=800&q=80",
+          title: "EVENT · Celebration Toast",
+        },
+
+        // Travel
+        {
+          id: 18,
+          cat: "travel",
+          url: "https://fravia.odoo.com/web/image/1555-9059d0aa/IMG_5089.webp",
+          title: "TRAVEL · Taj Mahal Sunrise",
+        },
+        {
+          id: 19,
+          cat: "travel",
+          url: "https://fravia.odoo.com/web/image/1129-f8f0c2c6/IMG_7021.webp",
+          title: "TRAVEL · Rajasthan Desert Dunes",
+        },
+        {
+          id: 20,
+          cat: "travel",
+          url: "https://fravia.odoo.com/web/image/1159-936661f4/IMG_6542.webp",
+          title: "TRAVEL · Kerala Backwaters",
+        },
+        {
+          id: 21,
+          cat: "travel",
+          url: "https://fravia.odoo.com/web/image/1171-ef861b6f/image-03%20%284%29.webp",
+          title: "TRAVEL · Himalayan Peaks",
+        },
+      ];
+
+      const grid = document.getElementById("masonryGrid");
+      function renderGrid(filter) {
+        grid.innerHTML = "";
+        photos
+          .filter((p) => filter === "all" || p.cat === filter)
+          .forEach((p, idx) => {
+            const fig = document.createElement("figure");
+            fig.dataset.idx = idx;
+            fig.innerHTML = `<img src="${p.url}" alt="${p.title}" loading="lazy">`;
+            fig.addEventListener("click", () =>
+              openLightbox(current.indexOf(p)),
+            );
+            grid.appendChild(fig);
+          });
+      }
+
+      let current = photos;
+      renderGrid("all");
+
+      document.querySelectorAll("#archFilters .filter-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          document
+            .querySelectorAll("#archFilters .filter-btn")
+            .forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+          const cat = btn.dataset.cat;
+          current =
+            cat === "all" ? photos : photos.filter((p) => p.cat === cat);
+          renderGrid(cat);
+        });
+      });
+
+      // lightbox
+      const lightbox = document.getElementById("lightbox");
+      const lbImg = document.getElementById("lbImg");
+      const lbCount = document.getElementById("lbCount");
+      const lbTitle = document.getElementById("lbTitle");
+      let lbIdx = 0;
+
+      function openLightbox(idx) {
+        lbIdx = idx;
+        showPhoto();
+        lightbox.classList.add("open");
+      }
+      function showPhoto() {
+        const p = current[lbIdx];
+        lbImg.src = p.url;
+        lbImg.alt = p.title;
+        lbCount.textContent = `${lbIdx + 1} / ${current.length}`;
+        lbTitle.textContent = p.title;
+      }
+      document
+        .querySelector(".lightbox-close")
+        .addEventListener("click", () => lightbox.classList.remove("open"));
+      document
+        .querySelector(".lightbox-nav.prev")
+        .addEventListener("click", () => {
+          lbIdx = (lbIdx - 1 + current.length) % current.length;
+          showPhoto();
+        });
+      document
+        .querySelector(".lightbox-nav.next")
+        .addEventListener("click", () => {
+          lbIdx = (lbIdx + 1) % current.length;
+          showPhoto();
+        });
+      document.addEventListener("keydown", (e) => {
+        if (!lightbox.classList.contains("open")) return;
+        if (e.key === "Escape") lightbox.classList.remove("open");
+        if (e.key === "ArrowLeft")
+          document.querySelector(".lightbox-nav.prev").click();
+        if (e.key === "ArrowRight")
+          document.querySelector(".lightbox-nav.next").click();
+      });
+    </script>
+  </body>
+</html>

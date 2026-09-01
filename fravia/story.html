@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="pageTitle">Story — Fravia Studios</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Archivo:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="dark-hero">
+    <div class="brand-intro" id="brandIntro" aria-hidden="true">
+      <span class="brand-intro-text" id="brandIntroText">FRAVIA</span>
+    </div>
+
+    <nav class="site-nav">
+      <div class="wrap nav-row">
+        <a href="index.html" class="nav-mark">FRAVIA</a>
+        <div class="nav-links">
+          <a href="work.html" class="current">Work</a>
+          <a href="services.html">Services</a>
+          <a href="about.html">About</a>
+          <a href="archive.html">Archive</a>
+        </div>
+        <a href="book.html" class="nav-cta">Book a session</a>
+        <button class="nav-burger" aria-label="Open menu">☰</button>
+      </div>
+    </nav>
+
+    <div class="nav-drawer">
+      <button class="nav-drawer-close" aria-label="Close menu">✕</button>
+      <a href="work.html">Work</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="archive.html">Archive</a>
+      <a href="book.html">Book a session</a>
+    </div>
+
+    <header class="story-hero">
+      <img id="heroImg" src="" alt="" />
+      <div class="wrap story-hero-copy">
+        <p class="loc" id="heroLoc"></p>
+        <h1 id="heroTitle"></h1>
+      </div>
+    </header>
+
+    <div class="wrap story-gallery" id="galleryBody"></div>
+
+    <div class="wrap story-tags" id="storyTags"></div>
+
+    <div class="wrap story-pagination">
+      <a id="prevStory" href="work.html">← Previous story</a>
+      <a href="work.html">All stories</a>
+      <a id="nextStory" href="work.html">Next story →</a>
+    </div>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <div class="footer-grid">
+          <div>
+            <div class="footer-mark">FRAVIA</div>
+            <p class="footer-tag">
+              Photography that feels like a memory. Weddings, portraits, events
+              and travel — based in Bangalore, available worldwide.
+            </p>
+          </div>
+          <div class="footer-col">
+            <h4>STUDIO</h4>
+            <a href="work.html">Work</a>
+            <a href="services.html">Services</a>
+            <a href="about.html">About</a>
+            <a href="archive.html">Stories</a>
+          </div>
+          <div class="footer-col">
+            <h4>CONNECT</h4>
+            <a
+              href="https://www.instagram.com/fravia.studios/"
+              target="_blank"
+              rel="noopener"
+              >Instagram</a
+            >
+            <a href="https://wa.me/9187556950" target="_blank" rel="noopener"
+              >WhatsApp</a
+            >
+            <a href="mailto:hello@fraviastudios.com">Email</a>
+            <a href="book.html">Book a session</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2026 Fravia Studios</span>
+          <span>Bangalore · India · Worldwide</span>
+        </div>
+      </div>
+    </footer>
+
+    <div class="float-bar">
+      <div class="wrap">
+        <span class="float-bar-mark">FRAVIA STUDIOS</span>
+        <div class="float-bar-links">
+          <a href="work.html?type=weddings">Weddings</a>
+          <a href="work.html?type=portraits">Portraits</a>
+          <a href="work.html?type=events">Events</a>
+          <a href="work.html?type=travel">Travel</a>
+        </div>
+        <div class="float-bar-cta">
+          <a
+            class="pill outline"
+            href="https://wa.me/9187556950"
+            target="_blank"
+            rel="noopener"
+            >WhatsApp</a
+          >
+          <a class="pill brass" href="book.html">Book a session →</a>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script>
+      // swapped out the picsum placeholder seeds for the real shots used on index.html.
+      // there's only a handful of actual assets to pull from though, so each category
+      // (wedding/travel/portrait/event) has its own small pool that gets cycled through -
+      // not every image is unique within a gallery, but at least they're on-theme.
+      const WEDDING_POOL = [
+        "https://instagram.fbom3-1.fna.fbcdn.net/v/t51.82787-15/645720817_17866224933583574_63915982017962339_n.jpg?stp=dst-jpg_e35_p320x320_tt6&_nc_cat=110&ig_cache_key=Mzg0NDAxNDAwNDI5MzY3OTk4OQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTMzMy5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=M8KTOjvYmmgQ7kNvwExPZNZ&_nc_oc=Adob6Gf164Tor3tjqpzzRqFcqPHmHi5_PLQ16IB8Oop8h2v2d1fbE5fwTpPcimv-7GA&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fbom3-1.fna&_nc_gid=5eMM2HWNfy2ixl33dz2KWQ&_nc_ss=7a22e&oh=00_AQIHU7ctp0f2Xsk31kjsKM1GmGCERucmon9gsMU5KGIDjg&oe=6A9B1767",
+        "https://instagram.fbom3-2.fna.fbcdn.net/v/t51.82787-15/626272489_17861777250583574_1941884951408476562_n.jpg?stp=dst-jpg_e35_p640x640_sh2.08_tt6&_nc_cat=107&ig_cache_key=MzgyMzAxMTI4NjQxNTAxMjgwMg%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0ueHBpZHMuMTQ0MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=9bN2oNBtq5kQ7kNvwGqVIvE&_nc_oc=AdogIeBHaT64jlFo53zTBLQ0p9saEi49TArAARO7JJ1MObV1A6vPswFECZv1JKhAwJ8&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fbom3-2.fna&_nc_gid=QYZpkoKBzIwMcY7L-EqNwg&_nc_ss=7a22e&oh=00_AQJGSET_XSRrcrMJvA_zjZT3HasJa_J3y8OXJW3RVjQbwg&oe=6A9B07A6",
+        "https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=1400&q=80",
+        "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1400&q=80",
+        "https://fravia.odoo.com/web/image/3367-f5b9a314/GKV_6259.webp",
+        "assets/firstlook.png",
+        "assets/thelaugh.png",
+        "assets/thechoas.png",
+        "assets/thedance.png",
+      ];
+      const TRAVEL_POOL = [
+        "https://fravia.odoo.com/web/image/1159-936661f4/IMG_6542.webp",
+        "https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1400&q=80",
+        "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1400&q=80",
+      ];
+      const PORTRAIT_POOL = [
+        "https://fravia.odoo.com/web/image/982-797a71c7/IMG_3534.webp",
+        "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1400&q=80",
+        "https://fravia.odoo.com/web/image/5610-b888916f/20240606184641__MG_4440.webp",
+        "https://fravia.odoo.com/web/image/4622-814fb183/0E4A7954.webp",
+      ];
+      const EVENT_POOL = [
+        "https://fravia.odoo.com/web/image/4703-3e90be35/GKV_8201.webp",
+        "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1400&q=80",
+        "https://fravia.odoo.com/web/image/3024-64ed582f/GKV_6690.webp",
+      ];
+
+      // grab n images from a pool, wrapping around if the gallery needs more than the pool has
+      function pull(pool, n, startAt = 0) {
+        const res = [];
+        for (let i = 0; i < n; i++) res.push(pool[(startAt + i) % pool.length]);
+        return res;
+      }
+
+      const stories = {
+        "aarav-riya": {
+          title: "The wedding that felt like a movie",
+          loc: "BANGALORE · DECEMBER 2026",
+          tags: ["Wedding", "Full day", "Bangalore"],
+          quote: '"Some moments don\'t need direction."',
+          layout: ["full", "pair", "quote", "full", "trio"],
+          images: pull(WEDDING_POOL, 8, 0),
+          prev: "studio-launch",
+          next: "goa-sunsets",
+        },
+        "goa-sunsets": {
+          title: "Sunsets in Goa",
+          loc: "GOA · OCTOBER 2026",
+          tags: ["Travel", "Couple", "Goa"],
+          quote: '"The light did most of the work that evening."',
+          layout: ["full", "pair", "quote", "trio"],
+          images: pull(TRAVEL_POOL, 7, 0),
+          prev: "aarav-riya",
+          next: "light-and-shadow",
+        },
+        "light-and-shadow": {
+          title: "Between light & shadow",
+          loc: "BANGALORE · SEPTEMBER 2026",
+          tags: ["Portrait", "Studio", "Bangalore"],
+          quote:
+            '"She stopped posing halfway through — that\'s when we got the shot."',
+          layout: ["pair", "full", "quote", "trio"],
+          images: pull(PORTRAIT_POOL, 7, 0),
+          prev: "goa-sunsets",
+          next: "three-hours",
+        },
+        "three-hours": {
+          title: "Three hours in Bangalore",
+          loc: "BANGALORE · AUGUST 2026",
+          tags: ["Event", "Half day", "Bangalore"],
+          quote: '"Nobody noticed the camera until the lights came up."',
+          layout: ["full", "trio", "quote", "pair"],
+          images: pull(EVENT_POOL, 7, 0),
+          prev: "light-and-shadow",
+          next: "nikhil-sana",
+        },
+        "nikhil-sana": {
+          title: "Nikhil × Sana, a monsoon wedding",
+          loc: "COORG · JULY 2026",
+          tags: ["Wedding", "Destination", "Coorg"],
+          quote: '"It rained through the vows. Nobody minded."',
+          layout: ["full", "pair", "quote", "trio"],
+          images: pull(WEDDING_POOL, 7, 8), // offset so it doesn't open on the exact same shot as aarav-riya
+          prev: "three-hours",
+          next: "studio-launch",
+        },
+        "studio-launch": {
+          title: "A product launch, shot like a documentary",
+          loc: "BANGALORE · JUNE 2026",
+          tags: ["Event", "Corporate", "Bangalore"],
+          quote: '"We treated the room like a set, not a stage."',
+          layout: ["pair", "full", "quote", "trio"],
+          images: pull(EVENT_POOL, 7, 1),
+          prev: "nikhil-sana",
+          next: "aarav-riya",
+        },
+      };
+
+      const slug =
+        new URLSearchParams(location.search).get("slug") || "aarav-riya";
+      const s = stories[slug] || stories["aarav-riya"];
+
+      document.getElementById("pageTitle").textContent =
+        s.title + " — Fravia Studios";
+
+      // first image in the pull is always the hero shot, rest go into the gallery body
+      const [heroSrc, ...galleryImgs] = s.images;
+      document.getElementById("heroImg").src = heroSrc;
+      document.getElementById("heroImg").alt = s.title;
+      document.getElementById("heroLoc").textContent = s.loc;
+      document.getElementById("heroTitle").textContent = s.title;
+
+      const body = document.getElementById("galleryBody");
+      let ptr = 0; // walks through galleryImgs as the layout blocks consume them
+
+      s.layout.forEach((kind) => {
+        if (kind === "quote") {
+          body.insertAdjacentHTML(
+            "beforeend",
+            `<p class="caption">${s.quote}</p>`,
+          );
+          return;
+        }
+        const need = kind === "full" ? 1 : kind === "pair" ? 2 : 3; // trio
+        const slice = galleryImgs.slice(ptr, ptr + need);
+        ptr += need;
+
+        if (kind === "full") {
+          body.insertAdjacentHTML(
+            "beforeend",
+            `<div class="full"><img src="${slice[0]}" alt="${s.title}"></div>`,
+          );
+        } else if (kind === "pair") {
+          const imgs = slice
+            .map((src) => `<img src="${src}" alt="${s.title}">`)
+            .join("");
+          body.insertAdjacentHTML(
+            "beforeend",
+            `<div class="pair">${imgs}</div>`,
+          );
+        } else if (kind === "trio") {
+          const imgs = slice
+            .map((src) => `<img src="${src}" alt="${s.title}">`)
+            .join("");
+          body.insertAdjacentHTML(
+            "beforeend",
+            `<div class="trio">${imgs}</div>`,
+          );
+        }
+      });
+
+      document.getElementById("storyTags").innerHTML = s.tags
+        .map((t) => `<span>${t}</span>`)
+        .join("");
+
+      const prevEl = document.getElementById("prevStory");
+      const nextEl = document.getElementById("nextStory");
+      prevEl.href = `story.html?slug=${s.prev}`;
+      prevEl.textContent = `← ${stories[s.prev].title}`;
+      nextEl.href = `story.html?slug=${s.next}`;
+      nextEl.textContent = `${stories[s.next].title} →`;
+    </script>
+  </body>
+</html>
