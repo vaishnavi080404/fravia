@@ -416,7 +416,7 @@ body.dark-hero .nav-cta {
   height: 100vh;
   min-height: 640px;
   overflow: hidden;
-  background: var(--ink);
+  background-color: transparent;
 }
 
 /* rotating ken-burns slideshow instead of one static frame */
@@ -434,14 +434,21 @@ body.dark-hero .nav-cta {
 }
 .hero-slide {
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   opacity: 0;
-  transition: opacity 1.8s var(--ease);
+  transition: opacity 1s ease-in-out;
 }
 .hero-slide.is-active {
   opacity: 1;
   z-index: 1;
 }
+.hero-slide:first-child {
+  opacity: 1;
+}
+
 .hero-slide img {
   width: 100%;
   height: 100%;
